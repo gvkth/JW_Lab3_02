@@ -9,7 +9,14 @@ public class Main {
 
         Coach alphaCoach = context.getBean("myCoach",Coach.class);
 
-        System.out.println("Inited singleton");
+        System.out.println("Memory location for theCoach:"+theCoach);
+        System.out.println("Memory location for alphaCoach:"+alphaCoach);
+
+        Boolean isTheSame = (theCoach==alphaCoach);
+        String messageCompare = isTheSame?"The same object":"2 differential objects";
+        System.out.println(messageCompare);
+        if(isTheSame)
+            System.out.println("=>Singleton pattern");
 
         context.close();
 
