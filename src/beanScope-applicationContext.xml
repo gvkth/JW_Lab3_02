@@ -11,7 +11,9 @@
 
     <bean id="myFortuneService" class="HappyFortuneService"></bean>
     <bean id="myCoach"
-          class="BaseballCoach">
+          class="BaseballCoach"
+          scope = "prototype"
+    >
 
         <!-- set up constructor injection -->
         <constructor-arg ref="myFortuneService" />
